@@ -1,0 +1,10 @@
+# instructions define application as a service called "server".
+# This service is built from the Dockerfile in the current directory.
+services:
+  recipe-planner.backend:
+    build:
+      context:  .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000

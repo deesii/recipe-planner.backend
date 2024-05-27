@@ -1,0 +1,14 @@
+# includes all files and directories that we do not want to be copied to container
+**/.dockerignore
+**/.env
+**/.git
+**/.gitignore
+**/.cache
+**/node_modules
+**/Dockerfile*
+**/compse.y*ml
+**/docker-compose*
+**/npm-debug.log
+**/.prettierrc
+**/eslint.config.mjs
+README.md
