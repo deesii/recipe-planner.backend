@@ -1,10 +1,21 @@
-# instructions define application as a service called "server".
-# This service is built from the Dockerfile in the current directory.
 services:
   recipe-planner.backend:
     build:
-      context:  .
+      context: .
     environment:
       NODE_ENV: production
+      MONGO_URL: mongo
     ports:
       - 3000:3000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - '27018:27017'
+    volumes:
+      - ./mongo-data:/data/db
+
+volumes:
+  mongo-data:
