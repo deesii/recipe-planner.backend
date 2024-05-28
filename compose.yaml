@@ -1,9 +1,8 @@
-# instructions define application as a service called "server".
-# This service is built from the Dockerfile in the current directory.
+# TODO: Add MongoDB dependency
 services:
   recipe-planner.backend:
     build:
-      context:  .
+      context: .
     environment:
       NODE_ENV: production
     ports:
