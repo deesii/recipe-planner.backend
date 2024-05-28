@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const connectDB = require('./');
 
-// TODO: Add jest to eslint config
 jest.mock('mongoose', () => {
   const mockedMongoose = {
     connect: jest.fn(),

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const databaseDomain = '127.0.0.1:27017';
+const databaseDomain = process.env.MONGO_URL || 'localhost:27017';
 const databaseName = 'test';
 
 const mongoDBUri = `mongodb://${databaseDomain}/${databaseName}`;

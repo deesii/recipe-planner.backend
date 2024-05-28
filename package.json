@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
+    "docker:up": "docker-compose -f compose.yaml up -d --force-recreate",
+    "docker:down": "docker-compose -f compose.yaml down --remove-orphans",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "lint": "eslint .",
