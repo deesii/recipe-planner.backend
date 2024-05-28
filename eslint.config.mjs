@@ -1,5 +1,6 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
+import jest from 'eslint-plugin-jest';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
@@ -7,9 +8,9 @@ export default [
   { languageOptions: { globals: globals.node } },
   eslintConfigPrettier,
   pluginJs.configs.recommended,
+  ...jest.configs['flat/all'],
   {
     rules: {
-      // Custom rules go here
       'no-console': 'off', // Allow console statements (useful for backend logging)
       semi: ['error', 'always'], // Require semicolons at the end of statements
       quotes: ['error', 'single'], // Enforce the use of single quotes
